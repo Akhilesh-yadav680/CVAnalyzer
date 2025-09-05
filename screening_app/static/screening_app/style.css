@@ -1,0 +1,52 @@
+/* General page background with subtle gradient */
+body {
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card shadow & hover effect */
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h2 {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #00bcd4, #007bff);
+    transform: scale(1.05);
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Progress bar text styling */
+.progress-bar {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}

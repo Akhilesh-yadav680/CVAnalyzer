@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Screening</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'screening_app/style.css' %}">
+</head>
+<body class="bg-light">
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 rounded-4" style="max-width: 500px; width: 100%;">
+        <h2 class="text-center text-primary mb-4">📄 Resume Screening</h2>
+        <p class="text-muted text-center">Upload a job description and a resume to analyze compatibility</p>
+        
+        {% if error %}
+            <div class="alert alert-danger text-center">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Job Description</label>
+                {{ form.job_description }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Resume</label>
+                {{ form.resume }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">🔍 Analyze</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
