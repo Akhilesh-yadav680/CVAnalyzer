@@ -17,7 +17,12 @@ A Django-based web application that automates candidate evaluation by matching r
 
 ## Installation
 ```bash
-git clone <https://github.com/Akhilesh-yadav680/CVAnalyzer>
+git clone https://github.com/Akhilesh-yadav680/CVAnalyzer.git
+cd CVAnalyzer
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
 cd resume_screening
 pip install -r requirements.txt
 python manage.py migrate
